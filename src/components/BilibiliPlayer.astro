@@ -1,0 +1,67 @@
+---
+// 定义组件接收的参数
+export interface Props {
+  bvid: string;  // 用户上传视频BV号（必要）
+  poster?: 0 | 1;  // 初始显示封面（默认开启）
+  autoplay?: 0 | 1; // 是否自动播放（默认否）
+  muted?: 0 | 1;  // 初始静音（默认不启用）
+  t?: number;  // 跳转时间点
+  danmaku?: 0 | 1;  // 是否开启弹幕
+  p?: number;  // p 数
+  allowfullscreen?: boolean; // 允许全屏（默认允许）
+  maxWidth?: string; // 可选参数：最大宽度（默认无限制）
+}
+
+// 设置默认参数（避免必填项遗漏）
+const {
+  bvid,
+  poster = 1,
+  autoplay = 0,
+  muted = 0,
+  t = 0,
+  danmaku = 1,
+  p = 1,
+  allowfullscreen = true,
+  maxWidth = "100%",
+} = Astro.props;
+
+// 拼接 iframe 的 src（动态插入参数）
+const playerSrc = `https://player.bilibili.com/player.html?bvid=${bvid}&poster=${poster}&autoplay=${autoplay}&muted=${muted}&t=${t}&danmaku=${danmaku}&p=${p}`;
+
+// 外层一个容器，限制最大宽度
+const maxWidthStyle = `
+    width: 100%;
+    max-width: ${maxWidth};
+    margin: 0 auto;
+`
+
+// 再套一个容器，用padding填充空白
+const paddingStyle = `
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 56.25%;
+`;
+
+// iframe只能拉伸填满父容器，而不是padding填充空白的办法
+const iframeStyle = `
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+`
+---
+
+<div style={maxWidthStyle}>
+  <div style={paddingStyle}>
+    <iframe
+      src={playerSrc}
+      scrolling="no"
+      frameborder="no"
+      allowfullscreen={allowfullscreen}
+      style={iframeStyle}
+      />
+  </div>
+</div>
