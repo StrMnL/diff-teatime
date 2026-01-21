@@ -1,0 +1,34 @@
+/* IMPORT FONT HERE */
+/* YOU SHOULD ALSO IMPORT IN Fonts.astro*/
+
+/* import Weilaiyuan SC*/
+@import url('/assets/fonts/weilaiyuan-sc-regular/weilaiyuan-sc-regular.css');
+
+/* DEFINE UNIFIED FONT STYLE */
+
+/* define css variables  */
+:root {
+    --font-family-base: '未来圆SC', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-family-mono: 'JetBrains Mono Variable', 'Consolas', monospace;
+}
+
+/* base style */
+html {
+    font-family: var(--font-family-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family-base);
+}
+
+/* special style for mono fonts */
+code, kbd, samp, pre {
+    font-family: var(--font-family-mono);
+}
+
+/* force Tailwind's font-sans to use base font (optional) */
+.font-sans {
+    font-family: var(--font-family-base) !important;
+}
