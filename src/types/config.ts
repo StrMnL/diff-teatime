@@ -57,6 +57,11 @@ export type NavBarLink = {
 };
 
 export type NavBarConfig = {
+	homeIcon?: {
+		icon?: string;
+		darkIcon?: string;
+	}
+	title?: string;
 	links: (NavBarLink | LinkPreset)[];
 };
 

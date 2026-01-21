@@ -81,6 +81,11 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navBarConfig: NavBarConfig = {
+	homeIcon: {
+		icon: "/assets/home-icon/teatime-light.png",
+		darkIcon: "/assets/home-icon/teatime-dark.png",
+	},
+	title: "偏微分茶会！",
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
