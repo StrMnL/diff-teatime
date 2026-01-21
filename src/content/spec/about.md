@@ -2,11 +2,7 @@
 
 这里是斯塔瑞的个人网站。
 
-曾经突然心血来潮就用 [Hugo](https://gohugo.io) 建立起了博客。如今切换到了基于 [Astro](https://astro.build/) 的 [fuwari](https://github.com/saicaca/fuwari) 模板。
-
-::github{repo="saicaca/fuwari"}
-
-Fuwari 是一个静态网站模板，所以这个网站也是一个静态网站。网站目前托管在 [Cloudflare Workers](https://workers.cloudflare.com/) 上。
+这是一个静态网站。也就是说，网站内容都是预先生成的。
 
 ## 斯塔瑞是谁？
 
@@ -23,3 +19,17 @@ Fuwari 是一个静态网站模板，所以这个网站也是一个静态网站�
 - 音 MAD。不过还在努力更新创作理念并打磨技术水平。
 - 东方 Project。因为看音 MAD 稀里糊涂地入坑了。
 - けいおん！如果你能懂我，你应该早就看出来了。
+
+## 特别感谢
+
+- [Astro](https://astro.build) - 提供了强大的适用于内容驱动型网站的 Web 框架
+
+::github{repo="withastro/astro"}
+
+- [fuwari](https://github.com/saicaca/fuwari) - 提供了美观、易用、易于拓展的 Astro 模板
+
+::github{repo="saicaca/fuwari"}
+
+- [中国网字计划](https://chinese-font.netlify.app/) - 提供了高效的字体分包工具
+
+- [yCENzh's Blog](https://fuwari.oh1.top/) - 在『[Astro字体研究](https://fuwari.oh1.top/posts/fuwari/astrosans/)』中分享了字体的自定义方法及加载优化方法
