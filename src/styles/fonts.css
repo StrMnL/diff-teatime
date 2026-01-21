@@ -1,8 +1,9 @@
 /* IMPORT FONT HERE */
-/* YOU SHOULD ALSO IMPORT IN Fonts.astro*/
 
 /* import Weilaiyuan SC*/
 @import url('/assets/fonts/weilaiyuan-sc-regular/weilaiyuan-sc-regular.css');
+
+/* preload should be set for the imported fonts in Fonts.astro */
 
 /* DEFINE UNIFIED FONT STYLE */
 
@@ -23,7 +24,7 @@ body {
     font-family: var(--font-family-base);
 }
 
-/* special style for mono fonts */
+/* style for mono fonts */
 code, kbd, samp, pre {
     font-family: var(--font-family-mono);
 }
