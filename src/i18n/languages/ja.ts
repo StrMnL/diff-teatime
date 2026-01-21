@@ -37,4 +37,5 @@ export const ja: Translation = {
 	[Key.license]: "ライセンス",
 
 	[Key.footnotes]: "脚注",
+	[Key.openSourceLicenses]: "オープンソースライセンス",
 };

@@ -34,6 +34,7 @@ enum I18nKey {
 	license = "license",
 
 	footnotes = "footnotes",
+	openSourceLicenses = "openSourceLicenses",
 }
 
 export default I18nKey;

@@ -37,4 +37,5 @@ export const en: Translation = {
 	[Key.license]: "License",
 
 	[Key.footnotes]: "Footnotes",
+	[Key.openSourceLicenses]: "Open Source Licenses",
 };

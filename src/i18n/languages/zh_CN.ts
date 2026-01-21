@@ -37,4 +37,5 @@ export const zh_CN: Translation = {
 	[Key.license]: "许可协议",
 
 	[Key.footnotes]: "脚注",
+	[Key.openSourceLicenses]: "开放源代码许可",
 };
