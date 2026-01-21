@@ -1,6 +1,6 @@
 ## astro
 
-```plaintext
+```plaintext title="LICENSE"
 MIT License
 
 Copyright (c) 2021 Fred K. Schott
@@ -64,7 +64,7 @@ SOFTWARE.
 
 ## cn-font-split
 
-```
+```plaintext title="LICENSE"
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -270,7 +270,7 @@ limitations under the License.
 
 ## fuwari
 
-```
+```plaintext title="LICENSE"
 MIT License
 
 Copyright (c) 2024 saicaca
