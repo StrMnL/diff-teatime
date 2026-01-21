@@ -100,6 +100,10 @@ export default defineConfig({
         }
 		}), svelte(), sitemap(), mdx()],
     markdown: {
+        smartypants: false,
+        mdx: {
+            smartypants: false,
+        },
         remarkRehype: {
             footnoteLabel: i18n(I18nKey.footnotes),
         },
