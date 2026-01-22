@@ -33,3 +33,7 @@
 - [中文网字计划](https://chinese-font.netlify.app/) - 提供了高效的字体分包工具
 
 - [yCENzh's Blog](https://fuwari.oh1.top/) - 在『[Astro字体研究](https://fuwari.oh1.top/posts/fuwari/astrosans/)』中分享了字体的自定义方法及加载优化方法
+
+## 另见
+
+- [开放源代码许可](/open-source-licenses/)
