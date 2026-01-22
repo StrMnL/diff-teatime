@@ -34,7 +34,15 @@ enum I18nKey {
 	license = "license",
 
 	footnotes = "footnotes",
+
+	// Open Source Licenses page
 	openSourceLicenses = "openSourceLicenses",
+
+	// 404 page
+	notFoundStatus = "notFound",
+	notFoundTitle = "notFoundTitle",
+	notFoundDescription = "notFoundDescription",
+	backToHome = "backToHome",
 }
 
 export default I18nKey;

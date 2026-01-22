@@ -37,5 +37,13 @@ export const zh_CN: Translation = {
 	[Key.license]: "许可协议",
 
 	[Key.footnotes]: "脚注",
+
+	// Open Source Licenses page
 	[Key.openSourceLicenses]: "开放源代码许可",
+
+	// 404 page
+	[Key.notFoundStatus]: "404",
+	[Key.notFoundTitle]: "找不到页面",
+	[Key.notFoundDescription]: "抱歉，您访问的页面不存在或已被移动。",
+	[Key.backToHome]: "返回首页",
 };

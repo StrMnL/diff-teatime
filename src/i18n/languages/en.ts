@@ -37,5 +37,14 @@ export const en: Translation = {
 	[Key.license]: "License",
 
 	[Key.footnotes]: "Footnotes",
+
+	// Open Source Licenses page
 	[Key.openSourceLicenses]: "Open Source Licenses",
+
+	// 404 Page
+	[Key.notFoundStatus]: "404",
+	[Key.notFoundTitle]: "Page Not Found",
+	[Key.notFoundDescription]:
+		"Sorry, the page you visited does not exist or has been moved.",
+	[Key.backToHome]: "Back to Home",
 };

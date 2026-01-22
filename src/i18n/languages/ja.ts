@@ -37,5 +37,14 @@ export const ja: Translation = {
 	[Key.license]: "ライセンス",
 
 	[Key.footnotes]: "脚注",
+
+	// Open Source Licenses page
 	[Key.openSourceLicenses]: "オープンソースライセンス",
+
+	// 404 page
+	[Key.notFoundStatus]: "404",
+	[Key.notFoundTitle]: "ページが見つかりません",
+	[Key.notFoundDescription]:
+		"申し訳ありませんが、アクセスしたページは存在しないか、移動されています。",
+	[Key.backToHome]: "ホームに戻る",
 };

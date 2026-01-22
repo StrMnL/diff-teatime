@@ -37,5 +37,13 @@ export const zh_TW: Translation = {
 	[Key.license]: "許可協議",
 
 	[Key.footnotes]: "註腳",
+
+	// Open Source Licenses page
 	[Key.openSourceLicenses]: "開放原始碼授權",
+
+	// 404 page
+	[Key.notFoundStatus]: "404",
+	[Key.notFoundTitle]: "找不到頁面",
+	[Key.notFoundDescription]: "抱歉，您訪問的頁面不存在或已被移動。",
+	[Key.backToHome]: "返回首頁",
 };
