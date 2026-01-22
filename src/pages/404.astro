@@ -1,0 +1,42 @@
+---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+
+---
+<MainGridLayout title={i18n(I18nKey.notFoundStatus)} description={i18n(I18nKey.notFoundDescription)}>
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-96">
+        <div class="card-base z-10 px-9 py-12 relative w-full flex flex-col items-center justify-center text-center">
+            <!-- error status code -->
+            <div class="text-8xl md:text-9xl font-bold text-[var(--primary)] opacity-20 mb-4">
+                {i18n(I18nKey.notFoundStatus)}
+            </div>
+
+            <!-- error icon -->
+            <div class="mb-6">
+                <Icon name="material-symbols:error-outline" class="text-6xl text-[var(--primary)]" />
+            </div>
+
+            <!-- error title -->
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 text-90">
+                {i18n(I18nKey.notFoundTitle)}
+            </h1>
+
+            <!-- error description -->
+            <p class="text-lg text-75 mb-8 max-w-md">
+                {i18n(I18nKey.notFoundDescription)}
+            </p>
+
+            <!-- back to home button -->
+            <a 
+                href="/" 
+                class="btn-regular gap-2 px-6 py-3 rounded-[var(--radius-large)] font-medium active:scale-90"
+            >
+                <Icon name="material-symbols:home" class="text-xl" />
+                {i18n(I18nKey.backToHome)}
+            </a>
+
+        </div>
+    </div>
+</MainGridLayout>
