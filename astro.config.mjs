@@ -9,6 +9,7 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components";/* Render the custom directive content */
+import rehypeExternalLinks from 'rehype-external-links';  /* Make ext links open in new tab */
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";/* Handle directives */
@@ -153,6 +154,12 @@ export default defineConfig({
                             },
                         ],
                     },
+                },
+            ],
+            [
+                rehypeExternalLinks,
+                {
+                    target: "_blank",
                 },
             ],
         ],
