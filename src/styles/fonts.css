@@ -1,6 +1,6 @@
 /* define font family variables */
 :root {
-    --font-family-base: var(--preferred-base-font),'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-family-base: var(--preferred-base-font), 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --font-family-mono: 'JetBrains Mono Variable', 'Consolas', monospace;
 }
 

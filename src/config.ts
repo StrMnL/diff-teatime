@@ -82,7 +82,12 @@ export const siteConfig: SiteConfig = {
 		base: {
 			fontFamily: "未来圆SC",
 			src: [
-				"/assets/fonts/weilaiyuan-sc-regular/weilaiyuan-sc-regular.css",
+				"/assets/fonts/WeiLaiYuan-SC/Thin/result.css",
+				"/assets/fonts/WeiLaiYuan-SC/Ultralight/result.css",
+				"/assets/fonts/WeiLaiYuan-SC/Light/result.css",
+				"/assets/fonts/WeiLaiYuan-SC/Regular/result.css",
+				"/assets/fonts/WeiLaiYuan-SC/Medium/result.css",
+				"/assets/fonts/WeiLaiYuan-SC/Bold/result.css",
 			],
 		},
 		/* mono: {
