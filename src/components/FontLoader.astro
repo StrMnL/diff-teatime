@@ -1,0 +1,19 @@
+---
+import { siteConfig } from "@/config";
+import "@/styles/main.css";
+import "@/styles/fonts.css"
+
+const { fonts } = siteConfig;
+---
+
+{
+    fonts && 
+        Object.values(fonts).map(font =>
+            font.src.map(source => 
+                <>
+                    <link rel="preload" href={source} as="style"/>
+                    <link rel="stylesheet" href={source}/>
+                </>
+            )
+        ).flat()
+}

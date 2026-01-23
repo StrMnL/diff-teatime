@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["未来圆SC", "sans-serif", ...defaultTheme.fontFamily.sans],
+        sans: ["Roboto", "sans-serif", ...defaultTheme.fontFamily.sans],  // ruined, overwritten by global css
       },
     },
   },

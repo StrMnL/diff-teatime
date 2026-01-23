@@ -78,6 +78,21 @@ export const siteConfig: SiteConfig = {
 			sizes: "32x32",
 		},
 	],
+	fonts: {
+		base: {
+			fontFamily: "未来圆SC",
+			src: [
+				"/assets/fonts/weilaiyuan-sc-regular/weilaiyuan-sc-regular.css",
+			],
+		},
+		/* mono: {
+			fontFamily: "未来圆SC",
+			src: [
+				"/a.css",
+				"/b.css",
+			],
+		}, */  // unsupported for now
+	},
 };
 
 export const navBarConfig: NavBarConfig = {

@@ -36,6 +36,14 @@ export type SiteConfig = {
 	};
 
 	favicon: Favicon[];
+
+	fonts?: {
+		base?: Font; 
+		mono: Font; 
+	} | { 
+		base: Font; 
+		mono?: Font; 
+	};
 };
 
 export type Favicon = {
@@ -44,11 +52,16 @@ export type Favicon = {
 	sizes?: string;
 };
 
+export type Font = {
+	fontFamily: string;
+	src: [string, ...string[]];  // requires at least one element
+};
+
 export enum LinkPreset {
 	Home = 0,
 	Archive = 1,
 	About = 2,
-}
+};
 
 export type NavBarLink = {
 	name: string;
