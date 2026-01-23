@@ -150,3 +150,7 @@
     }
   }
 }
+
+.dynamic-widget-wrapper:empty {
+    display: none;  /* for selectively-generated widgets with swup problem */
+}

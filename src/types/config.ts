@@ -109,6 +109,7 @@ export type BlogPostData = {
 	draft?: boolean;
 	image?: string;
 	category?: string;
+	series?: string;  // for post collections feature
 	prevTitle?: string;
 	prevSlug?: string;
 	nextTitle?: string;
