@@ -6,6 +6,7 @@ import { getPostUrlBySlug } from "../../utils/url-utils";
 import WidgetLayout from "./WidgetLayout.astro";
 
 const COLLAPSED_HEIGHT = "8rem";
+const MAX_CONTENT_HEIGHT = "16rem";
 
 interface Props {
 	class?: string;
@@ -18,10 +19,13 @@ const seriesName = Astro.props.series;
 
 const posts = await getPostsBySeries(seriesName);  // get post list by input series
 
-const isCollapsed = posts.length >= 10;
+// const isCollapsed = posts.length >= 10;
+const isCollapsed = false;
+
+const isScrollable = posts.length >= 10;
 ---
 {/* use fuwari's WidgetLayout to create widget */}
-<WidgetLayout name={i18n(I18nKey.series) + " · " + posts[0].data.series} id="series" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
+<WidgetLayout name={i18n(I18nKey.series) + " · " + posts[0].data.series} id="series" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} isScrollable={isScrollable} maxContentHeight={MAX_CONTENT_HEIGHT} class={className} style={style}>
     <div class="flex flex-col gap-1">
         {posts.map(post => (
             <a href={getPostUrlBySlug(post.slug)}
