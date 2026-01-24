@@ -5,6 +5,7 @@ published: 2024-06-08
 tags: [FL Studio, 编曲]
 category: 教程
 draft: false
+series: "才不是 FL 的错！"
 # image: ./00_cover.webp
 # permalink: "fl-tips/colorful-notes"
 ---
