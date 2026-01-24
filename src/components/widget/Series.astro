@@ -22,7 +22,7 @@ const posts = await getPostsBySeries(seriesName);  // get post list by input ser
 // const isCollapsed = posts.length >= 10;
 const isCollapsed = false;
 
-const isScrollable = posts.length >= 10;
+const isScrollable = posts.length >= 6;
 ---
 {/* use fuwari's WidgetLayout to create widget */}
 <WidgetLayout name={i18n(I18nKey.series) + " · " + posts[0].data.series} id="series" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} isScrollable={isScrollable} maxContentHeight={MAX_CONTENT_HEIGHT} class={className} style={style}>
