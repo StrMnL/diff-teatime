@@ -2,7 +2,7 @@
 
 This is Starry Monlark's personal website, based on the [fuwari](https://github.com/saicaca/fuwari/) template, which is powered by [Astro](https://astro.build/).
 
-The title is 偏微分茶会, or Partial Diffferential Tea Time.
+The title is *偏微分茶会*, or *Partial Diffferential Tea Time*.
 
 Well, the name in English is a bit too long, and I'd rather call it *Kappa Tea!*, where *kappa* means the greek letter `κ`, and *kappa tea* sounds like some kind of misspelling of *cuppa tea (cup of tea)*.
 
@@ -14,6 +14,8 @@ For more details, please view the website's [About](https://www.monlark.top/abou
 
 #### Practical Features
 
+- [x] Custom frontmatter `series` for posts, and `Series` (i18n name is Post Collections) widget showing posts of the same series
+- [ ] An series page to classify posts by `series` (by `categories` if `series` undefined, and classified as "Uncategorized" if both undefined), similar to the existing archive page (where posts are simply listed chronologically)
 - [ ] Templates for tiny files sharing, as a replacement of the old blog's [MIDI column](https://blog.strmnl.top/midi/)
 
 #### Trivial Matters to Make Life Easier
