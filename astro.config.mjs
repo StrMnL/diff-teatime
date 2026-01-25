@@ -33,7 +33,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
     site: "https://www.monlark.top/",
     base: "/",
-    trailingSlash: "always",
+    trailingSlash: "ignore",
     integrations: [tailwind({
         nesting: true,
 		}), swup({
