@@ -45,7 +45,7 @@ const jsonLd = {
 	// TODO include cover image here
 };
 ---
-{/* series from frontmatters is here passed to MainGridLayout to further passed to SideBar */}
+{/* `series` frontmatter is here passed to MainGridLayout to be further passed to SideBar */}
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description} lang={entry.data.lang} setOGTypeArticle={true} headings={headings} series={entry.data.series}>
     <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
