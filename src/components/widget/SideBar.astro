@@ -18,10 +18,10 @@ const seriesName = Astro.props.series
     <div class="flex flex-col w-full gap-4 mb-4">
         <Profile />
         <Tag class="onload-animation" style="animation-delay: 100ms" />
+        <Categories class="onload-animation" style="animation-delay: 150ms" />
     </div>
     <div id="sidebar-sticky" class="transition-swup-fade transition-all duration-700 flex flex-col w-full gap-4 top-4 sticky">
         <!-- sidebar-sticky will now reload all the time -->
-        { seriesName && <Series series={ seriesName } class="onload-animation" style="animation-delay: 150ms" /> }
-        <Categories class="onload-animation" style="animation-delay: 200ms" />
+        { seriesName && <Series series={ seriesName } class="onload-animation" style="animation-delay: 200ms" /> }
     </div>
 </div>
