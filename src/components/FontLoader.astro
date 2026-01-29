@@ -10,10 +10,11 @@ const { fonts } = siteConfig;
     fonts && 
         Object.values(fonts).map(font =>
             font.src.map(source => 
-                <>
-                    <link rel="preload" href={source} as="style"/>
-                    <link rel="stylesheet" href={source}/>
-                </>
+                /* no need to to wrap the two links with `<></>` */
+                /* as the outer `map()` returns a single array */
+                /* which is valid for an expression and can be properly handled by Astro */
+                <link rel="preload" href={source} as="style"/>
+                <link rel="stylesheet" href={source}/>
             )
         ).flat()
 }

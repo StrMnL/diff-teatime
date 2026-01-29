@@ -35,8 +35,8 @@ let links: NavBarLink[] = navBarConfig.links.map(
                         } else if (!homeIcon.darkIcon) {
                             return <img src={url(homeIcon.icon)} class="h-[2rem] w-[2rem] mb-1 mr-2 object-contain" loading="lazy" />;
                         } else {
-                            // add "dark:hidden" to style of icon，and "hidden dark:block" to style of darkIcon
-                            // wrap the two icons with <></> to return only one object
+                            /* add `dark:hidden` to style of icon，and `hidden dark:block` to style of darkIcon */
+                            /* wrap the two icons with `<></>` to make the returned object valid for an expression */
                             return <>
                                 <img src={url(homeIcon.icon)} class="h-[2rem] w-[2rem] mb-1 mr-2 object-contain dark:hidden" loading="lazy" />
                                 <img src={url(homeIcon.darkIcon)} class="h-[2rem] w-[2rem] mb-1 mr-2 object-contain hidden dark:block" loading="lazy" />
