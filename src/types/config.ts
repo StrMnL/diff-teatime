@@ -95,6 +95,12 @@ export type LicenseConfig = {
 	url: string;
 };
 
+export type HomePageConfig = {
+	newPostCards?: {
+		enable: boolean
+	}
+}
+
 export type LIGHT_DARK_MODE =
 	| typeof LIGHT_MODE
 	| typeof DARK_MODE

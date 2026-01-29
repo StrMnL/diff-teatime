@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getPostUrlBySlug } from "@utils/url-utils";
+import { homePageConfig } from "@/config";
 import PostCard from "./PostCard.astro";
 
 const { page } = Astro.props;
@@ -23,6 +24,7 @@ const interval = 50;
                 draft={entry.data.draft}
                 class:list="onload-animation"
                 style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+                enableNewStyle={homePageConfig.newPostCards?.enable}
         ></PostCard>
     ))}
 </div>

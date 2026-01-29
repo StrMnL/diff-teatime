@@ -1,5 +1,6 @@
 import type {
 	ExpressiveCodeConfig,
+	HomePageConfig,
 	LicenseConfig,
 	NavBarConfig,
 	ProfileConfig,
@@ -152,3 +153,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// Please select a dark theme, as this blog theme currently only supports dark background color
 	theme: "github-dark",
 };
+
+export const homePageConfig: HomePageConfig = {
+	newPostCards: {
+		enable: true,  // enable new style for post cards
+	}
+}
