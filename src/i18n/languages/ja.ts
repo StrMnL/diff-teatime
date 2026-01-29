@@ -50,4 +50,7 @@ export const ja: Translation = {
 	[Key.notFoundDescription]:
 		"申し訳ありませんが、アクセスしたページは存在しないか、移動されています。",
 	[Key.backToHome]: "ホームに戻る",
+
+	// TOC
+	[Key.toc]: "目次",
 };

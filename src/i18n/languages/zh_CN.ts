@@ -49,4 +49,7 @@ export const zh_CN: Translation = {
 	[Key.notFoundTitle]: "找不到页面",
 	[Key.notFoundDescription]: "抱歉，您访问的页面不存在或已被移动。",
 	[Key.backToHome]: "返回首页",
+
+	// TOC
+	[Key.toc]: "目录",
 };

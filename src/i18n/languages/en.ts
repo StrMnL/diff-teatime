@@ -50,4 +50,7 @@ export const en: Translation = {
 	[Key.notFoundDescription]:
 		"Sorry, the page you visited does not exist or has been moved.",
 	[Key.backToHome]: "Back to Home",
+
+	// TOC
+	[Key.toc]: "Table of Contents",
 };

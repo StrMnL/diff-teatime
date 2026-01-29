@@ -49,4 +49,7 @@ export const zh_TW: Translation = {
 	[Key.notFoundTitle]: "找不到頁面",
 	[Key.notFoundDescription]: "抱歉，您訪問的頁面不存在或已被移動。",
 	[Key.backToHome]: "返回首頁",
+
+	// TOC
+	[Key.toc]: "目錄"
 };

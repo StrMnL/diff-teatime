@@ -1,0 +1,63 @@
+---
+import type { MarkdownHeading } from "astro";
+import { siteConfig } from "../../config";
+import I18nKey from "../../i18n/i18nKey";
+import { i18n } from "../../i18n/translation";
+// import { url } from "../../utils/url-utils";
+import WidgetLayout from "./WidgetLayout.astro";
+
+const MAX_CONTENT_HEIGHT = "16rem";
+
+interface Props {
+    style?: string;
+	class?: string;
+	headings: MarkdownHeading[];
+}
+
+const {
+    style,
+    headings = [] 
+} = Astro.props;
+
+const className = Astro.props.class;
+
+let minDepth = 10;
+for (const heading of headings) {
+	minDepth = Math.min(minDepth, heading.depth);
+}
+
+// const isPostsRoute = Astro.url.pathname.startsWith(url("/posts/"));
+
+const removeTailingHash = (text: string) => {
+	const lastIndexOfHash = text.lastIndexOf("#");
+	if (lastIndexOfHash !== text.length - 1) {
+		return text;
+	}
+
+	return text.substring(0, lastIndexOfHash);
+};
+
+let heading1Count = 1;
+
+const maxLevel = siteConfig.toc.depth;
+---
+<WidgetLayout name={i18n(I18nKey.toc)} id="sidebar-toc" isCollapsed={false} isScrollable={true} maxContentHeight={MAX_CONTENT_HEIGHT} class={className} style={style}>
+    {headings.filter((heading) => heading.depth < minDepth + maxLevel).map((heading) =>
+        <a href={`#${heading.slug}`} class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl py-2 
+        hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]">
+            <div class:list={["transition w-5 h-5 shrink-0 rounded-lg text-xs flex items-center justify-center font-bold",
+                {
+                    "bg-[var(--btn-regular-bg)] text-[var(--btn-content)]": heading.depth == minDepth,
+                    "ml-4": heading.depth == minDepth + 1,
+                    "ml-8": heading.depth == minDepth + 2,
+                }
+            ]}>
+                {heading.depth == minDepth && heading1Count++}
+                {heading.depth == minDepth + 1 && <div class="transition w-2 h-2 rounded-[0.1875rem] bg-[var(--toc-badge-bg)]"></div>}
+                {heading.depth == minDepth + 2 && <div class="transition w-1.5 h-1.5 rounded-sm bg-black/5 dark:bg-white/10"></div>}
+            </div>
+            <div class="transition text-sm text-50">{removeTailingHash(heading.text)}</div>
+        </a>
+    )}
+</WidgetLayout>
+

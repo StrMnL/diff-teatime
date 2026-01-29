@@ -46,6 +46,9 @@ enum I18nKey {
 	notFoundTitle = "notFoundTitle",
 	notFoundDescription = "notFoundDescription",
 	backToHome = "backToHome",
+
+	// TOC
+	toc = "toc",
 }
 
 export default I18nKey;
