@@ -100,6 +100,10 @@ export const siteConfig: SiteConfig = {
 			],
 		}, */  // unsupported for now
 	},
+	customFooters: {
+		enable: true,
+		objects: []
+	},
 };
 
 export const navBarConfig: NavBarConfig = {

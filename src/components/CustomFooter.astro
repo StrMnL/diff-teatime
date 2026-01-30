@@ -1,0 +1,20 @@
+---
+import type { FooterObject } from '@/types/config'
+
+interface Props {
+    objects?: FooterObject[];
+}
+
+let { objects = [] } = Astro.props;
+const extraFooters = (JSON.parse(import.meta.env.EXTRA_FOOTERS||"[]")) as FooterObject[];
+objects = objects.concat(extraFooters);
+
+---
+{objects && objects.length > 0 &&
+    objects.map(object => {
+        const text = object.href ? 
+            <a class="transition link text-[var(--primary)] font-medium" rel="noreferrer" target="_blank" href={object.href}>{object.text}</a> : 
+            <span>{object.text}</span>;
+        return object.icon ? <span class="flex justify-center items-center gap-1"><img src={object.icon} class="size-4">{text}</span><br> : <span>{text}</span><br>;
+    })
+}

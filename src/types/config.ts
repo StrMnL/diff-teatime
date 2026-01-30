@@ -45,6 +45,11 @@ export type SiteConfig = {
 		base: Font; 
 		mono?: Font; 
 	};
+
+	customFooters?: {
+		enable: boolean;
+		objects?: FooterObject[];
+	}
 };
 
 export type Favicon = {
@@ -125,4 +130,10 @@ export type BlogPostData = {
 
 export type ExpressiveCodeConfig = {
 	theme: string;
+};
+
+export type FooterObject = {
+	href?: string;
+	text: string;
+	icon?: string;
 };
