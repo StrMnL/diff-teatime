@@ -21,14 +21,22 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+      
+      - name: Setup SSH
+        env:
+          DEPLOY_KEY: ${{ secrets.BACKUP_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Fetch additional resources and clean up
         env:
-          PAT: ${{ secrets.BACKUP_REPO_TOKEN }}
           BACKUP_REPO : ${{ secrets.BACKUP_REPO }}
         run: |
           mkdir -p temp-backup
-          git clone --branch res --depth 1 https://$PAT@github.com/$BACKUP_REPO.git temp-backup
+          git clone --branch res --depth 1 git@github.com:$BACKUP_REPO.git temp-backup
           cp -rfv temp-backup/* ./
           rm -rf temp-backup
           rm -rf .github
@@ -37,12 +45,11 @@ jobs:
         run: |
           git add -A
           git reset $(git commit-tree HEAD^{tree} -m "Sync commit(s) from diff-teatime/main")
+          git add -A
           git commit --amend -m "Sync commit(s) from diff-teatime/main"
 
       - name: Force push to backup
         env:
-          PAT: ${{ secrets.BACKUP_REPO_TOKEN }}
           BACKUP_REPO : ${{ secrets.BACKUP_REPO }}
         run: |
-          git remote add backup https://$PAT@github.com/$BACKUP_REPO.git
-          git push -f backup main
+          git push -f git@github.com:$BACKUP_REPO.git main
