@@ -3,6 +3,7 @@ name: Backup to private repo
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,7 +22,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Fetch additional resources
+      - name: Fetch additional resources and clean up
         env:
           PAT: ${{ secrets.BACKUP_REPO_TOKEN }}
           BACKUP_REPO : ${{ secrets.BACKUP_REPO }}
@@ -30,18 +31,18 @@ jobs:
           git clone --branch res --depth 1 https://$PAT@github.com/$BACKUP_REPO.git temp-backup
           cp -rfv temp-backup/* ./
           rm -rf temp-backup
+          rm -rf .github
 
       - name: Squash contents
         run: |
           git add -A
-          git reset $(git commit-tree HEAD^{tree} -m "Sync commit(s) from diff-teatime/main [skip ci]")
-          git commit --amend -m "Sync commit(s) from diff-teatime/main [skip ci]"
+          git reset $(git commit-tree HEAD^{tree} -m "Sync commit(s) from diff-teatime/main")
+          git commit --amend -m "Sync commit(s) from diff-teatime/main"
 
       - name: Force push to backup
         env:
           PAT: ${{ secrets.BACKUP_REPO_TOKEN }}
           BACKUP_REPO : ${{ secrets.BACKUP_REPO }}
         run: |
-          git remote remove backup || true
           git remote add backup https://$PAT@github.com/$BACKUP_REPO.git
           git push -f backup main
