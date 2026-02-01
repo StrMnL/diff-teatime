@@ -3,7 +3,7 @@ title: "用 pandas 进行数据预处理"
 description: "在使用 PyTorch 这样的工具围绕数据开展工作之前，常常需要先将原始数据读入 Python，并做一些预处理，以便能够将数据表示为规范的 n 维数组。"
 published: 2026-02-01
 # updated: 2026-02-01
-tags: [机器学习, 深度学习, PyTorch, 数据预处理]
+tags: [机器学习, 深度学习, PyTorch, 数据预处理, pandas]
 category: 笔记
 series: "动手学深度学习"
 draft: false
