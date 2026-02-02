@@ -3,7 +3,7 @@ title: "用 pandas 进行数据预处理"
 description: "在使用 PyTorch 这样的工具围绕数据开展工作之前，常常需要先将原始数据读入 Python，并做一些预处理，以便能够将数据表示为规范的 n 维数组。"
 published: 2026-02-01
 # updated: 2026-02-01
-tags: [机器学习, 深度学习, PyTorch, 数据预处理, pandas]
+tags: [机器学习, 深度学习, PyTorch, pandas]
 category: 笔记
 series: "动手学深度学习"
 draft: false
@@ -124,7 +124,7 @@ print(inputs)
 ```
 
 :::caution[关于 pandas 的版本差异]
-- 这里我使用的是 pandas 2.3.3，而原书使用的是更旧的版本。所以在原书中，`pd.get_dummies()` 的结果不是布尔值，而是 `1` 和 `0`。不过，后面转换为 `tensor` 时仍然会被处理为 `1` 和 `0`。
+- 这里我使用的是 pandas 2.3.3，而原书（中文版）使用的是更旧的版本。所以在原书中，`pd.get_dummies()` 的结果不是布尔值，而是 `1` 和 `0`。不过，后面转换为 `tensor` 时仍然会被处理为 `1` 和 `0`。
 - 原书中的顺序是先 `inputs.fillna(inputs.mean())` 再 `pd.get_dummies(inputs, dummy_na=True)`，`mean()` 方法会忽略 `Alley` 一列。但在 pandas 2.x 中，`mean()` 方法会报错：  
   ````plaintext showLineNumbers=false
   TypeError: can only concatenate str (not "int") to str
@@ -156,6 +156,10 @@ X, y
  tensor([127500., 106000., 178100., 140000.], dtype=torch.float64))
 ```
 
+:::tip[提示]
+这里 `to_numpy()` 方法可以指定 `dtype`，机器学习一般使用 `float32`。
+:::
+
 ## 补充：关于包版本冲突
 
 在运行原书本节的代码时，我遇到了这样的情况：先导入 `torch`，再导入 `pandas`，无事发生，一切都很好；把顺序反过来（就像上面那样），导入 `torch` 就会报错：
@@ -165,9 +169,9 @@ OSError: [WinError 1114] 动态链接库(DLL)初始化例程失败。
 Error loading "C:\ProgramData\anaconda3\envs\d2l\lib\site-packages\torch\lib\c10.dll" or one of its dependencies.
 ```
 
-我最开始使用的是原书的 `d2l` 包要求的 pandas 2.0.3，这个版本发布距离笔记写作时已有两年多。而 torch 的版本是较新的 2.10.0+cu130，推测可能是兼容性问题所致。
+我最开始使用的是原书的 `d2l` 包要求的 pandas 2.0.3，这个版本的发布时间距离本笔记的写作时间已有两年多。而 torch 的版本则是较新的 2.10.0+cu130，推测可能是兼容性问题所致。
 
-后将 pandas 更新为 2025 年 9 月的 2.3.3 版本即可解决问题。
+经过尝试，将 pandas 更新为 2025 年 9 月的 2.3.3 版本即可解决问题。
 
 这个错误应该和 Microsoft VC++ 2019-2022 运行库有关。可能是先导入旧版的 `pandas` 会先加载其依赖的不兼容版本的某些 DLL，导致后续 `torch` 加载 `c10.dll` 时发生冲突。
 
