@@ -136,7 +136,7 @@ print(inputs)
 
 最后我们希望将处理好的 pandas 对象转换为 `tensor`。
 
-Pandas 对象的底层就是 `ndarray`，所以可以先用 pandas 对象的 `to_numpy()` 方法将其转换为 `ndarray`。然后再按[上一篇笔记](http://localhost:4321/posts/d2l-preliminaries-ndarray/)介绍的将 `ndarray` 转换为 `tensor` 的方式和注意事项操作即可。
+Pandas 对象的底层就是 `ndarray`，所以可以先用 pandas 对象的 `to_numpy()` 方法将其转换为 `ndarray`。然后再按[上一篇笔记](/posts/d2l-preliminaries-ndarray/)介绍的将 `ndarray` 转换为 `tensor` 的方式和注意事项操作即可。
 
 ```python
 import torch
