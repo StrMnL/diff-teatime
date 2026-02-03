@@ -180,3 +180,9 @@ $$
 :::
 
 在 PyTorch 中，可以用 `torch.norm(u, p)` 方法求一个向量 $\mathbf{u}$ 的 $L_p$ 范数（矩阵的元素形式范数也可以使用这个方法）。和范数的写法一样，`p` 的默认值是 2。
+
+---
+
+## 参考文献
+
+1. Zhang A, Lipton Z C, Li M, et al. Dive into Deep Learning. Cambridge University Press, 2023. [https://D2L.ai](https://D2L.ai).
