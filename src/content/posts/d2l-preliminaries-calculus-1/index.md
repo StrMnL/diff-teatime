@@ -223,7 +223,7 @@ $$
 一元情况下的复合函数求导遵循链式法则．若 $y=f(u)$ 和 $u=g(x)$ 可微，则
 
 $$
-\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}.
+\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u} \cdot \frac{\mathrm{d}u}{\mathrm{d}x}.
 $$
 
 推广到多元的情况，首先考虑两层复合，假设有可微函数 $y=(u_1, u_2, \dots, u_m)$，而每个 $u_i$ 是以 $x_1, x_2, \dots, x_n$ 为自变量的可微函数．那么 $y$ 也是关于 $x_1, x_2, \dots, x_n$ 的函数，可以对每个 $x_i$ 求偏导．此时求导的结果为对每个 $u_i$ 应用链式法则，然后求和：
