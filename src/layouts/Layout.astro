@@ -77,7 +77,7 @@ const bannerOffset =
 
 <!DOCTYPE html>
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]"
-	  data-overlayscrollbars-initialize
+	  
 >
 	<head>
 		<title>{pageTitle}</title>
@@ -153,7 +153,7 @@ const bannerOffset =
 		
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
-		  data-overlayscrollbars-initialize
+		  
 	>
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
@@ -291,7 +291,7 @@ function loadHue() {
 }
 
 function initCustomScrollbar() {
-	const bodyElement = document.querySelector('body');
+	/* const bodyElement = document.querySelector('body');
 	if (!bodyElement) return;
 	OverlayScrollbars(
 		// docs say that a initialization to the body element would affect native functionality like window.scrollTo
@@ -308,7 +308,7 @@ function initCustomScrollbar() {
 			autoHideDelay: 500,
 			autoHideSuspend: false,
 		},
-	});
+	}); */
 
 	const collapseWrappers = document.querySelectorAll('.collapse-wrapper.scrollable') as NodeListOf<HTMLElement>;
 	collapseWrappers.length > 0 && collapseWrappers.forEach(collapseWrapper => {
@@ -327,9 +327,9 @@ function initCustomScrollbar() {
 			},
 		}
 	);
-	})
+	}) 
 
-	const katexElements = document.querySelectorAll('.katex-display') as NodeListOf<HTMLElement>;
+	/* const katexElements = document.querySelectorAll('.katex-display') as NodeListOf<HTMLElement>;
 
 	const katexObserverOptions = {
 		root: null,
@@ -371,7 +371,7 @@ function initCustomScrollbar() {
 
 	katexElements.forEach(element => {
 		katexObserver.observe(element);
-	});
+	}); */
 }
 
 function showBanner() {
