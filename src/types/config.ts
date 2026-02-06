@@ -49,7 +49,9 @@ export type SiteConfig = {
 	customFooters?: {
 		enable: boolean;
 		objects?: FooterObject[];
-	}
+	};
+
+	mobileMarginX?: boolean;
 };
 
 export type Favicon = {

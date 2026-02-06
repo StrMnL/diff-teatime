@@ -104,6 +104,7 @@ export const siteConfig: SiteConfig = {
 		enable: true,
 		objects: []
 	},
+	mobileMarginX: true,
 };
 
 export const navBarConfig: NavBarConfig = {
