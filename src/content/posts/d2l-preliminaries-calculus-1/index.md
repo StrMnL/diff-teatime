@@ -190,7 +190,7 @@ a_{m1} & a_{m2} & \dots & a_{mn}
 
 有以下常用结论：
 
-1. 线性映射 $\mathbf{y=Ax} = [y_1, y_2, \dots, y_m]^\top$ 关于 $\mathbf{x}$ 求导，有：
+1. 线性映射 $\mathbf{y=Ax}$ 关于 $\mathbf{x}$ 求导，有：
 
 $$
 \frac{\partial \mathbf{y}}{\partial \mathbf{x}} = \mathbf{A}^\top .
