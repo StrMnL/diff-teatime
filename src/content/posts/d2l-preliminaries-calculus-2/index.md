@@ -10,7 +10,7 @@ draft: false
 ---
 
 :::important[免责声明]
-- 这是对上一篇笔记『[机器学习中的微分（上）](/posts/d2l-preliminaries-calculus-1/)』内容的补充．
+- 这是对上一篇笔记『[机器学习中的微分](/posts/d2l-preliminaries-calculus-1/)』内容的补充．
 - 笔记作者并不是数学系的学生，数学水平有限，**证明和表述可能存在疏漏、模糊、不严谨之处**．
 :::
 
