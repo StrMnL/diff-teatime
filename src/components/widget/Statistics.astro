@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon/components";
+// biome-ignore lint/suspicious/noShadowRestrictedNames: <toString from mdast-util-to-string>
+import { toString } from "mdast-util-to-string";
+import getReadingTime from "reading-time";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import { getSortedPosts } from "@/utils/content-utils";
+
+interface Props {
+    hasTopBorder?: boolean;
+    hasDivider?: boolean;
+}
+
+const posts = await getSortedPosts();
+
+const totalPosts = posts.length;
+
+let totalWords = 0;
+for (const post of posts) {
+	const postRendered = await post.render();
+	if (postRendered.remarkPluginFrontmatter.words) {
+		totalWords += postRendered.remarkPluginFrontmatter.words;  // align with word count in frontmatters
+	}
+}
+
+const { hasTopBorder, hasDivider } = Astro.props;
+---
+<!-- statistics -->
+<div class="grid grid-cols-2 pt-3" class:list={[{ "mt-3 border-t border-neutral-300 dark:border-neutral-700 transition": hasTopBorder }]}>
+    <!-- number of posts -->
+    <div class="flex flex-row items-center justify-center gap-1">
+        <span class="text-xs text-neutral-400 transition">{i18n(totalPosts <= 1 ? I18nKey.totalPost : I18nKey.totalPosts)}</span>
+        <span class="text-sm font-bold text-neutral-700 dark:text-neutral-300 transition">{totalPosts}</span>
+    </div>
+    <!-- word count of posts -->
+    <div class="flex items-center justify-center gap-1" class:list={[{"border-l border-neutral-300 dark:border-neutral-700": hasDivider}]}>
+        <span class="text-xs text-neutral-400 transition">{i18n(totalWords <= 1 ? I18nKey.totalWord : I18nKey.totalWords)}</span>
+        <span class="text-sm font-bold text-neutral-700 dark:text-neutral-300 transition">{totalWords}</span>
+    </div>
+</div>

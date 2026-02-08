@@ -24,6 +24,12 @@ enum I18nKey {
 	postCount = "postCount",
 	postsCount = "postsCount",
 
+	// statistics widget
+	totalWord = "totalWord",
+	totalPost = "totalPost",
+	totalWords = "totalWords",
+	totalPosts = "totalPosts",
+
 	themeColor = "themeColor",
 
 	lightMode = "lightMode",

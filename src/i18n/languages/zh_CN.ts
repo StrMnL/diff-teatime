@@ -27,6 +27,12 @@ export const zh_CN: Translation = {
 	[Key.postCount]: "篇文章",
 	[Key.postsCount]: "篇文章",
 
+	// statistics widget
+	[Key.totalWord]: "总字数",
+	[Key.totalPost]: "文章数",
+	[Key.totalWords]: "总字数",
+	[Key.totalPosts]: "文章数",
+
 	[Key.themeColor]: "主题色",
 
 	[Key.lightMode]: "亮色",

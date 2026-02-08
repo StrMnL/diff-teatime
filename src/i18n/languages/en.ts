@@ -27,6 +27,12 @@ export const en: Translation = {
 	[Key.postCount]: "post",
 	[Key.postsCount]: "posts",
 
+	// statistics widget
+	[Key.totalWord]: "Total word",
+	[Key.totalPost]: "Total post",
+	[Key.totalWords]: "Total words",
+	[Key.totalPosts]: "Total posts",
+
 	[Key.themeColor]: "Theme Color",
 
 	[Key.lightMode]: "Light",

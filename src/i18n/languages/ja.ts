@@ -27,6 +27,12 @@ export const ja: Translation = {
 	[Key.postCount]: "件の投稿",
 	[Key.postsCount]: "件の投稿",
 
+	// statistics widget
+	[Key.totalWord]: "文字数の合計",
+	[Key.totalPost]: "投稿数の合計",
+	[Key.totalWords]: "文字数の合計",
+	[Key.totalPosts]: "投稿数の合計",
+
 	[Key.themeColor]: "テーマカラー",
 
 	[Key.lightMode]: "ライト",
