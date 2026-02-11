@@ -1,8 +1,8 @@
 ---
-title: "PyTorch 中的自动微分（上）"
+title: "PyTorch 中的自动微分 (上)"
 description: "在上一篇笔记中，我们讨论了求导与自动求导的目的。现在我们可以介绍自动求导是如何实现的。"
-published: 2026-02-09
-# updated: 2026-02-09
+published: 2026-02-10
+# updated: 2026-02-10
 tags: [机器学习, 深度学习, PyTorch]
 category: 笔记
 series: "动手学深度学习"
