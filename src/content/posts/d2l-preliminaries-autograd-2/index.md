@@ -3,8 +3,8 @@ title: "PyTorch 中的自动微分 (下)"
 description: "这篇笔记主要介绍 PyTorch 中自动微分的使用方法。"
 published: 2026-02-11
 # updated: 2026-02-11
-tags: [机器学习, 深度学习, PyTorch]
-category: 笔记
+tags: [PyTorch]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---

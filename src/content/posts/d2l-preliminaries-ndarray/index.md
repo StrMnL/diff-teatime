@@ -3,8 +3,8 @@ title: "N 维数组及其基础操作"
 description: "n 维数组是处理大批量数据时常用的数据结构，也是机器学习中主要使用的数据结构。"
 published: 2026-01-28
 updated: 2026-02-01
-tags: [机器学习, 深度学习, PyTorch, 数据结构]
-category: 笔记
+tags: [PyTorch, 数据结构]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---

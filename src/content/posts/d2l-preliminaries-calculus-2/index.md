@@ -3,8 +3,8 @@ title: "常用向量导数结果证明"
 description: "补充对上一篇笔记中几个「常用向量导数结果」的证明. "
 published: 2026-02-06
 # updated: 2026-02-06
-tags: [数学, 微分]
-category: 笔记
+tags: [微分]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---

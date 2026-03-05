@@ -3,9 +3,9 @@ title: 不是装饰吗？——钢琴卷帘中的 MIDI 多通道编辑
 description: "FL Studio 零碎小教程 #1"
 published: 2024-06-08
 tags: [FL Studio, 编曲]
-category: 教程
+category: 音乐技术
 draft: false
-series: "才不是 FL 的错！"
+# series: "才不是 FL 的错！"
 # image: ./00_cover.webp
 # permalink: "fl-tips/colorful-notes"
 ---

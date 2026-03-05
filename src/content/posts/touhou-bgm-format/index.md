@@ -4,7 +4,7 @@ description: 关于 thbgm.dat、thbgm.fmt 和 musiccmt.txt 的浅显研究。
 published: 2023-07-01
 updated: 2025-10-04
 tags: [东方 Project,数据结构]
-category: 技术
+category: 技术杂谈
 draft: false
 image: ./nikita-Oybl3L0_vq4-unsplash.webp
 # permalink: "touhou-bgm-format"

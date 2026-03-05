@@ -3,8 +3,8 @@ title: "什么是梯度？"
 description: "上上篇笔记中提到梯度的定义。不过，仅凭定义，我们仍不能很好地看出梯度如何刻画标量函数变化的整体趋势。我们希望得到一个解释：梯度到底是什么？"
 published: 2026-02-07
 # updated: 2026-02-07
-tags: [机器学习, 深度学习, 数学, 微分]
-category: 笔记
+tags: [微分]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---

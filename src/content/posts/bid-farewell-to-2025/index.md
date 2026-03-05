@@ -5,6 +5,7 @@ published: 2025-12-31
 tags: [回顾总结]
 category: 随笔
 draft: false
+series: test
 # permalink: "bid-farewell-to-2025"
 ---
 

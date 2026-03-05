@@ -3,8 +3,8 @@ title: "机器学习中的微分"
 description: "机器学习中优化问题的求解还需要用到一些微分知识. 偏微分茶会终于开始求微分了吗？"
 published: 2026-02-05
 # updated: 2026-02-05
-tags: [机器学习, 深度学习, 数学, 微分]
-category: 笔记
+tags: [微分]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---

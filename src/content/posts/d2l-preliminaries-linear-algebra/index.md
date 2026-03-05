@@ -3,8 +3,8 @@ title: "机器学习中的线性代数"
 description: "机器学习中大量用到向量和矩阵的运算，线性代数是这些运算的基础。"
 published: 2026-02-02
 # updated: 2026-02-02
-tags: [机器学习, 深度学习, PyTorch, 数学, 线性代数]
-category: 笔记
+tags: [PyTorch, 线性代数]
+category: 机器学习
 series: "动手学深度学习"
 draft: false
 ---
