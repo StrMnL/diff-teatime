@@ -10,7 +10,11 @@ const categories = await getCategoryList();
 const COLLAPSED_HEIGHT = "7.5rem";
 const COLLAPSE_THRESHOLD = 5;
 
-const isCollapsed = categories.length >= COLLAPSE_THRESHOLD;
+const MAX_CONTENT_HEIGHT = "12.8rem";
+const isScrollable = categories.length > 5;
+
+// const isCollapsed = categories.length >= COLLAPSE_THRESHOLD;
+const isCollapsed = false;
 
 interface Props {
 	class?: string;
@@ -20,7 +24,7 @@ const className = Astro.props.class;
 const style = Astro.props.style;
 ---
 
-<WidgetLayout name={i18n(I18nKey.categories)} id="categories" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT}
+<WidgetLayout name={i18n(I18nKey.categories)} id="categories" isCollapsed={isCollapsed} isScrollable={isScrollable} collapsedHeight={COLLAPSED_HEIGHT} maxContentHeight={MAX_CONTENT_HEIGHT}
                 class={className} style={style}
 >
     {categories.map((c) =>

@@ -40,8 +40,10 @@ const removeTailingHash = (text: string) => {
 let heading1Count = 1;
 
 const maxLevel = siteConfig.toc.depth;
+
+const isScrollable = headings.length > 7;
 ---
-<WidgetLayout name={i18n(I18nKey.toc)} id="sidebar-toc" isCollapsed={false} isScrollable={true} maxContentHeight={MAX_CONTENT_HEIGHT} class={className} style={style}>
+<WidgetLayout name={i18n(I18nKey.toc)} id="sidebar-toc" isCollapsed={false} isScrollable={isScrollable} maxContentHeight={MAX_CONTENT_HEIGHT} class={className} style={style}>
     {headings.filter((heading) => heading.depth < minDepth + maxLevel).map((heading) =>
         <a href={`#${heading.slug}`} class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl py-2 
         hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]">
